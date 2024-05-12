@@ -9,7 +9,7 @@ interface Props {
     content: string,
     author: {
         id: string,
-        name: string,
+        username: string,
         image: string,
     },
     community: {
