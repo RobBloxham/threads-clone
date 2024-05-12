@@ -17,7 +17,7 @@ interface Props {
         name: string,
         image: string,  
     } | null,
-    createAt: string,
+    createdAt: string,
     comments: {
         author: {
             image: string,
@@ -34,7 +34,7 @@ const ThreadCard = ({
     content,
     author,
     community,
-    createAt,
+    createdAt,
     comments,
     isComment,
 }: Props) => {
