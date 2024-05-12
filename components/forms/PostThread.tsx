@@ -21,13 +21,12 @@ import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
 
 interface Props {
-  userId: string;
+  readonly userId: string;
 }
 
 function PostThread({ userId }: Props) {
   const router = useRouter();
   const pathname = usePathname();
-
   const { organization } = useOrganization();
 
   const form = useForm<z.infer<typeof ThreadValidation>>({

@@ -9,9 +9,9 @@ import { fetchUser } from "@/lib/actions/user.actions";
 
 async function Home({
   searchParams,
-}: {
+} : Readonly<{
   searchParams: { [key: string]: string | undefined };
-}) {
+}>) {
   const user = await currentUser();
   if (!user) return null;
 
@@ -43,7 +43,6 @@ async function Home({
                 community={post.community}
                 createdAt={post.createdAt}
                 comments={post.children}
-                isComment
               />
             ))}
           </>
